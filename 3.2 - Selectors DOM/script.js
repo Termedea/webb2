@@ -1,3 +1,5 @@
+/* Testa i en browser (F12 -> Console) */
+
 console.log("hello world!");
 
 var children = document.body.childNodes;
