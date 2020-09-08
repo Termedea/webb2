@@ -1,0 +1,51 @@
+
+.header {
+  background-color: #212745;
+  color: white;
+}
+.content {
+  width: 80%; 
+  margin: 0 auto;
+}
+
+.container {  
+  float: left; /* Overflow hidden löser också detta */
+  width: 100%;  
+
+  
+
+}
+.left, .right {
+  float: left;
+  padding: 2em;
+}
+
+.left {
+  background: #5ECCF3;
+  width: 75%;
+  /* Enda sättet för samma höjd på dem båda är att sätta en fast height. */
+  height: 500px;
+}
+
+.right {
+  background: #F14124;
+  width: 25%;  
+
+    /* Enda sättet för samma höjd på dem båda är att sätta en fast height. */
+    height: 500px;
+}
+
+/* Border box finns visserligen nu för tiden. Då kan vi ha padding utan att det påverkar totalbredden  */
+* {
+  box-sizing: border-box;
+  margin: 0; 
+  padding: 0;
+}
+
+.footer {
+  /* Vad gör footern där uppe? */
+  /* (Overflow hidden löser också detta) */
+  clear: both;
+  background: #212745;
+  color: white;
+}
