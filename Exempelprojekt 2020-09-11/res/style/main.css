@@ -6,14 +6,18 @@ body {
     font-size: 14pt;
   }
 
-@media screen and (min-width: 900px) and (max-width: 1200px) {
-    body {      
-        background-image: url(../images/background-1366.png) ;
+  @media (min-width: 640px)  {
+    
+    body {
+      background-image: url(../images/background-900.png);  /* Den nästminsta av våra bakgrunder. Det är dumt att ha en onödigt stor bild för en liten skärm. */         
+      font-size: 14pt;     
     }
 }
 
-@media screen and (min-width: 1200px) {
-    body {      
-        background-image: url(../images/background-1920.png) ;
+@media (min-width: 1366px) {
+    
+    body {
+        background-image: url(../images/background-1920.png);     
+        font-size: 15pt;           
     }
 }
