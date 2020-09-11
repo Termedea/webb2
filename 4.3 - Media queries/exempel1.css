@@ -42,8 +42,11 @@ div.exempelbild {
         width: 200px;
         height: 200px;
     }
-
-    .main-menu li {
+    .main-menu ul {
+        background: yellow;        
+        padding: 1em;        
+    }
+    .main-menu li {        
         float: left; 
         font-size: 1em;
         margin: 0; 
