@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .header {
   background-color: #212745;
@@ -5,65 +9,54 @@
 }
 .content {
   width: 80%; 
-  margin: 0 auto;
-  /* background-color: blue; */
-  /* Varför följer denna inte med hela vägen ner? */
+  margin: 0 auto;  
 }
 
 .container {  
-  /* Fast höjd funkar ju, men man kanske inte vet vilken höjd det ska vara. Den kanske ska vara flexibel? */
-  /* height: 500px; */
-  /* Funkar bättre, om man rättar till footern, förstås */
-  /* float: left; */ /* Overflow hidden löser detta */
+  /* 4. Kan vi fixa footern här? Provar oss fram här och i footer tills det tycks funka.  */
+  overflow: hidden;
   width: 100%;  
-
-
 }
-.left, .right {
-  float: left;
-  /*Om vi vill ha padding behöver vi räkna om detta. Om allt är procent blir det ju ganska enkelt? Om det inte är en massa annat som också har padding förstås. */
-  padding: 1%;
-  /* och om man vill ha en annan enhet då? */
-  /* padding: 20px; */
-  /* Vad händer om vi vill ha en border? */
-  /* border: 1px solid #000; */
 
+.left, .right {
+  /* 1. Vi börjar med att sätta float */
+  float: left; 
+  /* 2. Vi vill också ha en padding på 2% */ 
+  padding: 2%; 
+  /* 5. Så hur gör vi så att left och right hamnar bredvid varandra trots padding? 
+  Vi provar oss fram med lite olika siffror tills det verkar funka*/
   
 }
 
 .left {
   background: #5ECCF3;
-  width: 74%;
-  /* Enda sättet för samma höjd på dem båda är att sätta en fast height. */
-  /* height: 500px; */
+
+  /* 5. Så hur gör vi så att left och right hamnar bredvid varandra trots padding? 
+  Vi provar oss fram med lite olika siffror tills det verkar funka*/
+  width: 75%;
+  
+  /* 7. Börjar se hyfsat ut, men hur gör vi om vi vill ha samma höjd på left och right? */
 }
 
 .right {
   background: #F14124;
-  /* Borde ha funkat kanske? 74+25+1 är ju 100? Det måste vara något mer som tar plats */
+  /* 5. Så hur gör vi så att left och right hamnar bredvid varandra trots padding? 
+  Vi provar oss fram med lite olika siffror tills det verkar funka. */
   width: 25%;
-  /* Vi testar med något annat. Tar till lite */
-  /* width: 20%; */
 
-  /* Enda sättet för samma höjd på dem båda är att sätta en fast height. Men om man vill att den högra ska vara lika stor som den vänstra blir med sitt innehåll?  Det blir pyssel bortom min kompetensnivå. */
-  /* height: 500px; */
-  
-  
+  /* 7. Börjar se hyfsat ut, men hur gör vi om vi vill ha samma höjd på left och right? */
 }
 
-/* Border box finns visserligen nu för tiden. Då kan vi ha padding utan att det påverkar totalbredden  */
+/* 6. Minns vi inte något om box-sizing...?  */
+
 * {
-  /* box-sizing: border-box; */
-  
-  /* Fortfarande ett konstigt glapp... */
-  /* margin: 0; 
-  padding: 0; */
+  box-sizing: border-box;
 }
+
 
 .footer {
-  /* Vad gör footern där uppe? */
-  /* (Overflow hidden löser också detta) */
-  /* clear: both; */ 
+  /* 3. Ok så varför är footern där? Hur löser vi det? Vad kan vi för tricks? Kanske content spelar roll? */
+
   background: #212745;
   color: white;
 }

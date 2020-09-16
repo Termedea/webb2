@@ -41,8 +41,14 @@ div {
 
 .grid-1 {
     display: grid;
-    /* Alla kolumner är 150px breda */
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+}
+
+/* Rad 4 sträcker är 2x2 rutor stor och befinner sig i nedre vänstra hörnet */
+.item-4{
     
-    /* två rader är 100px, den sista är 300px */
+    /* Samma exempel fast med span */
 
 }
+

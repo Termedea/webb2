@@ -1,0 +1,35 @@
+/* #region  Grundläggande styling - rör ej */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #212745;
+    color: white;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.left {
+    background: #5ECCF3;
+    width: 75%;
+}
+
+.right {
+    background: #F14124;
+    width: 25%;
+
+}
+
+.footer {
+    background: #212745;
+    color: white;
+}
+
+/* #endregion */
+

@@ -1,8 +1,9 @@
-/* #region  Grundläggande styling - rör ej. */
+/* #region  Grundläggande css (rör ej) */
 * {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: arial;
     font-size: 16pt;
@@ -51,4 +52,13 @@ div {
 
 /* #endregion */
 
-/* Skriv koden nedanför */
+
+.grid-1 {
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+    /* grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 33%); */
+} 
