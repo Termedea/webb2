@@ -1,3 +1,5 @@
+/* #region Grundläggande styling */
+
 /*Grundläggande styling*/
 body {
     font-family: arial;
@@ -34,5 +36,18 @@ div {
 .item-9 {
     background-color: orange; 
 }
+/* #endregion */
 
-/* Skriv koden nedanför */
+
+.grid-1 {
+    height: 1000px; /* För att se storlekarna bättre */
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 200px 150px 30em;
+    grid-template-rows: 100px 20em 2%;
+}
+
+.item-1 {
+    grid-row: 1;
+    grid-column: span 3;
+}
