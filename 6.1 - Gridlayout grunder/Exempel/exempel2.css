@@ -1,8 +1,7 @@
-/* #region  Grundläggande css (rör ej) */
-* {
-    margin: 0;
-    padding: 0;
-}
+/* #region Grundläggande styling */
+
+
+/*Grundläggande styling*/
 
 body {
     font-family: arial;
@@ -50,13 +49,14 @@ div {
     background-color: orange;
 }
 
-/* #endregion */
 
+/* #endregion */
 
 .grid-1 {
     display: grid;
-    gap: 3em;
-    
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: repeat(3, 33%);
-} 
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+}
+
+
+/* Rad 4 sträcker är 2x2 rutor stor och befinner sig i nedre vänstra hörnet */
