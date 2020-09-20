@@ -23,7 +23,7 @@ div {
   grid-column: 1 / span 2;
 }
 
-.content {
+.left {
   background: #5ECCF3;
   grid-row: 2;
   grid-column: 1;
