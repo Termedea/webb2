@@ -1,8 +1,10 @@
-/* #region  Grundläggande styling - rör ej. */
+/* #region  Grundläggande styling. Rör ej. */
+
 * {
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: arial;
     font-size: 16pt;
@@ -49,6 +51,8 @@ div {
     background-color: orange;
 }
 
+
 /* #endregion */
 
-/* Skriv koden nedanför */
+
+/* Skriv koden här nedanför: */
