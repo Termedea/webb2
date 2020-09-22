@@ -1,0 +1,47 @@
+/* #region  Grundläggande styling - rör ej! */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container>div {
+    padding: 1em;
+}
+
+.header {
+    background-color: #212745;
+    color: white;
+}
+
+.left {
+    background: #5ECCF3;
+}
+
+.left .image {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+}
+
+.right {
+    background: #F14124;
+}
+
+.footer {
+    background-color: #212745;
+    color: #fff;
+    min-height: 5em;
+}
+
+.extra-content {
+    background-color: black;
+    color: white;
+    min-height: 10em;
+}
+
+
+/* #endregion */
+
+
+/* Skriv din CSS nedanför */
