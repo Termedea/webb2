@@ -1,56 +1,44 @@
-/* #region Grundläggande styling */
-
-/*Grundläggande styling*/
 body {
-    font-family: arial;
-    font-size: 16pt;
-    color: white;
+  font-family: arial;
+  font-size: 16pt;
+  color: white;
 }
 div {
-    padding: 1em;
-}   
-.item-1 {
-    background-color: red; 
+  padding: 1em;
 }
-.item-2 {
-    background-color: cadetblue; 
+.header {
+  background-color: red;
 }
-.item-3 {
-    background-color: #666; 
+.menu {
+  background-color: cadetblue;
 }
-.item-4 {
-    background-color:darkred;
+.sidebar {
+  background-color: #666;
 }
-.item-5 {
-    background-color: darkcyan; 
+.card {
+  background-color: darkred;
 }
-.item-6 {
-    background-color: lightcoral; 
-}   
-.item-7 {
-    background-color: darkorchid; 
+.footer {
+  background-color: darkcyan;
 }
-.item-8 {
-    background-color: darkslateblue; 
-}
-.item-9 {
-    background-color: orange; 
-}
-/* #endregion */
-.grid-1 {
-    margin: 0 auto;
-    width: 50%;
-    display: grid; 
-    grid-template-rows: 200px 50px 500px 60px;
-    grid-template-columns: 10% 90%;
+.content {
+  background-color: lightcoral;
 }
 
-.item-1, .item-2, .item-5 {
-    grid-column: span 2; 
-}
-.item-3 {
-    grid-column: 1,
-}
-.item-4 {
+@media screen and (min-width: 650px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .header,
+  .footer,
+  .menu {
+    grid-column: 1 / span 2;
+  }
+  .sidebar {
+    grid-column: 1;
+  }
+  .content {
     grid-column: 2;
+  }
 }
