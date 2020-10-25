@@ -1,0 +1,51 @@
+body {
+    background: #000; 
+}
+div {
+    height: 100px;
+    width: 100px;
+    padding: 2em;
+}
+
+
+
+/* Element med båda klasserna*/
+.class1.class2 {
+    background: #00F;
+}
+
+/*Element med class2 som ligger innuti element med class1*/
+.class1 .class2 {
+    background: #0FF;
+}
+
+/*Element som har class1 eller class2 */
+.class1, .class2 {
+    width: 300px;
+}
+.class1 {
+    background: #FF0;
+}
+
+.class2 {
+    background: #F00;
+}
+
+/*Samma regler med mellanslag och komma, fast det går inte att sätta två id:n på samma element, så utan mellanslag gäller inte.*/
+
+#id1 {
+    background-color: purple;
+}
+
+/*Kräver både id1 och id2, ska därför aldrig hända eftersom ett element bara har 1 id.*/
+/*#id1#id2 {
+
+}*/
+
+#id1, #id2 {
+    background-color: darkgreen;
+}
+
+#id1 #id3 {
+    background-color: chocolate;
+}

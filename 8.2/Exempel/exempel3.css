@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 
+    > = direct child
+    :first-child
+    :nth-child(2)
+    :last-child
+    :nth-last-child(2)
+    + = sibling
+*/
+
+
+.container div {
+    font-size: 24px;
+    border: 1px solid #000;
+}
+
+.container+div {
+    background-color: purple;
+    color: white; 
+}
+
+
+
+
+
+
+
