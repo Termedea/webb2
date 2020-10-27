@@ -1,0 +1,16 @@
+div {
+    border: 1px solid #000;
+    padding: 1em;
+}
+
+/* 1. Innehållet i något med klassen left i en div med id footer */
+
+/* 2. Innehållet i något med klassen middle innuti en div */
+
+/* 3. Innehållet i en div med id footer och klass container */
+
+/* 4. Innehållet i en div med klassen left eller right */
+
+/* 5. Innehållet i en div med klassen left som ligger direkt under något med klassen container. */
+
+/* 6. Extra: Sök ut den första paragrafen i klassen left (inleds med 1 respektive 3) */

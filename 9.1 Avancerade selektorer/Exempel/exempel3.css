@@ -1,0 +1,36 @@
+div {
+    border: 1px solid #000;
+    padding: 1em;
+}
+
+/* 1. Innehållet i något med klassen left i en div med id footer */
+/* div#footer .left {
+    color: darkmagenta;
+} */
+
+/* 2. Innehållet i något med klassen middle innuti en div */
+/* div .middle {
+    color: darkmagenta;
+} */
+
+/* 3. Innehållet i en div med id footer och klass container */
+/* div#footer.container {
+    color: darkmagenta;
+} */
+
+/* 4. Innehållet i en div med klassen left eller right */
+/* div.left,
+div.right {
+    color: darkmagenta;
+} */
+
+/* 5. Innehållet i en div med klassen left som ligger direkt under något med klassen container. */
+/* .container > div.left {
+    background: lightblue;
+} */
+
+/* 6. Extra: Sök ut den första paragrafen i klassen left (inleds med 1 respektive 3) */
+/* .left p:first-of-type {
+    background: lightblue;
+}
+ */

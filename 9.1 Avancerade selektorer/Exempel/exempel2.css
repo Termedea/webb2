@@ -1,34 +1,32 @@
 body {
-    background: #000; 
+    background: #000;
+    box-sizing: border-box;
 }
 div {
-    height: 100px;
-    width: 100px;
     padding: 2em;
 }
 
-
-
 /* Element med båda klasserna*/
 .class1.class2 {
-    background: #00F;
+    background: #00f;
 }
 
 /*Element med class2 som ligger innuti element med class1*/
 .class1 .class2 {
-    background: #0FF;
+    background: #0ff;
 }
 
-/*Element som har class1 eller class2 */
-.class1, .class2 {
-    width: 300px;
+/*Element som har class1 och/eller class2 */
+.class1,
+.class2 {
+    border: 1px solid #fff;
 }
 .class1 {
-    background: #FF0;
+    background: #ff0;
 }
 
 .class2 {
-    background: #F00;
+    background: #f00;
 }
 
 /*Samma regler med mellanslag och komma, fast det går inte att sätta två id:n på samma element, så utan mellanslag gäller inte.*/
@@ -42,10 +40,20 @@ div {
 
 }*/
 
-#id1, #id2 {
+/* element med id1 eller id2 */
+#id1,
+#id2 {
     background-color: darkgreen;
 }
 
+/* Element med id3 inuti element med id1 */
+
 #id1 #id3 {
     background-color: chocolate;
+}
+
+/* Element med id3 och class1. Rätt ovanligt scenario, men kan inträffa när man vill förändra ett element 
+med JavaScript och således förändra id3:s utseende med hjälp av en klass */
+#id3.class2 {
+    background-color: red;
 }
