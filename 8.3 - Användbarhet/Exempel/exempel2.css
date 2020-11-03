@@ -1,0 +1,19 @@
+body {
+    background: pink;
+    background: lightskyblue;
+    background: blueviolet;
+    background: greenyellow;
+    background: orange;
+    background: skyblue;
+    background: blanchedalmond;
+    background: blue;
+
+    /* Tobias blir rädd för detta, för att det ser ut som blue screen. Han får ångest och tycker att jag lika gärna hade kunnat ha en bild på ett blödande djur.
+    Vi ska inte ge Tobias ångest! */
+}
+
+p,
+h2,
+a {
+    color: white;
+}
