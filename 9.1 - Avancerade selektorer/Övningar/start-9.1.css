@@ -1,16 +1,18 @@
+/* Det finns padding och border från början för att göra elementen lättare att se. Ta bort dem om du vill. */
+
 div {
     border: 1px solid #000;
     padding: 1em;
 }
 
-/* 1. Innehållet i något med klassen left i en div med id footer */
+/* Skriv CSS för Övning 1 här nedanför */
 
-/* 2. Innehållet i något med klassen middle innuti en div */
+/* Kommentera bort CSS för övning 1 och skriv CSS för Övning 2 här nedanför */
 
-/* 3. Innehållet i en div med id footer och klass container */
+/* Kommentera bort CSS för övning 2 och skriv CSS för Övning 3 här nedanför */
 
-/* 4. Innehållet i en div med klassen left eller right */
+/* Kommentera bort CSS för övning 3 och skriv CSS för Övning 4 här nedanför */
 
-/* 5. Innehållet i en div med klassen left som ligger direkt under något med klassen container. */
+/* Kommentera bort CSS för övning 4 och skriv CSS för Övning 5 här nedanför */
 
-/* 6. Extra: Sök ut den första paragrafen i klassen left (inleds med 1 respektive 3) */
+/* Kommentera bort CSS för övning 5 och skriv CSS för Övning 6 här nedanför */
