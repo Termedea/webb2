@@ -1,0 +1,47 @@
+img {
+    /* Första värdet är x andra värdet är y. Värdet anges som valfri storleksenhet */
+    /* transform: translate(120px, 500px); */
+    /* Går att dela upp */
+    /* Sammma som translate(120px, 0) */
+    /* transform: translateX(120px); */
+    /* Sammma som translate(0, 500px) */
+    /* transform: translateY(500px); */
+
+    /* transition: transform 2s ease; */
+
+    /* transition-property: opacity, transform;
+    transition-duration: 2s; */
+    /* transition: transform 2s ease; */
+
+    /* animerar hunden över 3 sekunder, oändligt många gånger, och med linjär hastighet.  */
+    animation: poor-dog 3s infinite linear;
+}
+/* img:hover {
+    transform: rotate(50deg) translateX(120px) skew(75deg) scale(0.3);
+    opacity: 0;
+} */
+p {
+    /* Ändrar storleken över två sekunder och upprepar det två gånger. */
+    animation: change-font-size 2s 2;
+}
+
+@keyframes change-font-size {
+    0% {
+        font-size: 12px;
+    }
+    50% {
+        font-size: 15px;
+    }
+    100% {
+        font-size: 18px;
+    }
+}
+
+@keyframes poor-dog {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
