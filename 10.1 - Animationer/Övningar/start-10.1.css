@@ -1,0 +1,18 @@
+/* Base */
+body {
+    padding: 2rem;
+    font-family: "Trebuchet MS", sans-serif;
+}
+a {
+    background: lightblue;
+    padding: 1rem;
+    color: rgb(3, 3, 85);
+    text-decoration: none;
+    margin-right: 1rem;
+    display: inline-block;
+    /* Hack så att texten inte förvrängs. */
+    transform: perspective(1px) translateZ(0);
+}
+a:hover {
+    text-decoration: none;
+}

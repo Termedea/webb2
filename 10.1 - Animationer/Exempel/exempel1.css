@@ -1,3 +1,21 @@
+body {
+    padding: 2rem;
+    font-family: "Trebuchet MS", sans-serif;
+}
+a {
+    background: lightblue;
+    padding: 1rem;
+    color: rgb(3, 3, 85);
+    text-decoration: none;
+    margin-right: 1rem;
+    display: inline-block;
+    /* Hack så att texten inte förvrängs. */
+    transform: perspective(1px) translateZ(0);
+}
+a:hover {
+    text-decoration: none;
+}
+
 img {
     /* Första värdet är x andra värdet är y. Värdet anges som valfri storleksenhet */
     /* transform: translate(120px, 500px); */
@@ -11,18 +29,21 @@ img {
 
     /* transition-property: opacity, transform;
     transition-duration: 2s; */
-    /* transition: transform 2s ease; */
+    /* transition: transform 200ms ease; */
+
+    /* transform-origin: 0; */
 
     /* animerar hunden över 3 sekunder, oändligt många gånger, och med linjär hastighet.  */
-    animation: poor-dog 3s infinite linear;
+    /* animation: poor-dog 3s infinite linear; */
 }
-/* img:hover {
-    transform: rotate(50deg) translateX(120px) skew(75deg) scale(0.3);
-    opacity: 0;
-} */
+img:hover {
+    /* transform: scale(2); */
+    /*transform: rotate(50deg) translateX(120px) skew(75deg) scale(0.3);
+    opacity: 0;*/
+}
 p {
     /* Ändrar storleken över två sekunder och upprepar det två gånger. */
-    animation: change-font-size 2s 2;
+    /* animation: change-font-size 2s 2; */
 }
 
 @keyframes change-font-size {
