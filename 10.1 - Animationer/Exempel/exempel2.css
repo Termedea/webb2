@@ -119,7 +119,7 @@ a:hover {
 .sweep-right::before {
     /* För att pseudoelmentet ens ska synas */
     content: "";
-    /* Positionering av pseudoelement (täcker hela elementet) */
+    /* Positionering av pseudoelement täcker hela elementet (0 i avstånd till left, right, top, bottom) */
     position: absolute;
     top: 0;
     left: 0;
@@ -159,7 +159,7 @@ a:hover {
     bottom: 0;
     /* Bakground bakom text */
     z-index: -1;
-    /* Vanlig css för att sätta animationen */
+    /* Animationen */
     transition: transform 300ms ease-out;
     /* Effekten */
     background: lightblue;
@@ -186,23 +186,26 @@ a:hover {
     content: "";
     position: absolute;
     z-index: -1;
-    left: 0;
-    right: 100%;
+    right: 0;
+    top: 0;
     bottom: 0;
+    left: 0;
     background: darkcyan;
-    height: 4px;
+    height: 10px;
     /* Absolut positionering låter oss animera vart elementet befinner sig. I detta var höger-punkten befinner sig */
-    transition: right 200ms ease-out;
+    transform: scaleY(0);
+    transition: transform 200ms ease-out;
+    transform-origin: top;
 }
 
 .border-under-left:hover::before {
-    right: 0;
+    transform: scaleY(1);
 }
 
 .border-round {
-    transition: border-radius 500ms linear;
+    transition: border-radius 2s linear;
 }
 
 .border-round:hover {
-    border-radius: 1rem;
+    border-radius: 50%;
 }
