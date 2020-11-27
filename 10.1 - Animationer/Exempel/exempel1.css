@@ -2,6 +2,7 @@ body {
     padding: 2rem;
     font-family: "Trebuchet MS", sans-serif;
 }
+
 a {
     background: lightblue;
     padding: 1rem;
@@ -12,11 +13,18 @@ a {
     /* Hack så att texten inte förvrängs. */
     transform: perspective(1px) translateZ(0);
 }
+
 a:hover {
     text-decoration: none;
 }
 
 img {
+    opacity: 1;
+    transition: opacity 200ms linear;
+    /*   transition-property: opacity;
+    transition-duration: 2s;
+    transition-timing-function: linear; */
+    /* border: 1px solid white; */
     /* Första värdet är x andra värdet är y. Värdet anges som valfri storleksenhet */
     /* transform: translate(120px, 500px); */
     /* Går att dela upp */
@@ -24,26 +32,23 @@ img {
     /* transform: translateX(120px); */
     /* Sammma som translate(0, 500px) */
     /* transform: translateY(500px); */
-
     /* transition: transform 2s ease; */
-
     /* transition-property: opacity, transform;
     transition-duration: 2s; */
     /* transition: transform 200ms ease; */
-
     /* transform-origin: 0; */
-
     /* animerar hunden över 3 sekunder, oändligt många gånger, och med linjär hastighet.  */
-    /* animation: poor-dog 3s infinite linear; */
+    animation: poor-dog 3s infinite linear;
 }
+
 img:hover {
-    /* transform: scale(2); */
-    /*transform: rotate(50deg) translateX(120px) skew(75deg) scale(0.3);
-    opacity: 0;*/
+    opacity: 0.5;
+    /* transform: rotate(50deg) translateX(120px) skew(75deg) scale(0.3); */
 }
+
 p {
     /* Ändrar storleken över två sekunder och upprepar det två gånger. */
-    /* animation: change-font-size 2s 2; */
+    animation: change-font-size 2s infinite;
 }
 
 @keyframes change-font-size {
@@ -53,8 +58,11 @@ p {
     50% {
         font-size: 15px;
     }
+    66% {
+        font-size: 24px;
+    }
     100% {
-        font-size: 18px;
+        font-size: 12px;
     }
 }
 
