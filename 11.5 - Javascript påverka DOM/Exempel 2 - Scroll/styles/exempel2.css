@@ -1,0 +1,16 @@
+body {
+    height: 200vh;
+}
+div {
+    width: 200px;
+    margin: 10rem auto;
+}
+.large {
+    height: 200px;
+}
+.middle {
+    height: 100px;
+}
+.small {
+    height: 50px;
+}
