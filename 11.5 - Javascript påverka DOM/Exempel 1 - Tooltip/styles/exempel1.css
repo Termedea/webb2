@@ -22,3 +22,12 @@
 .hidden {
     opacity: 0;
 }
+
+#square {
+    position: absolute;
+    padding: 2rem;
+    text-align: center;
+    width: 200px;
+    color: white;
+    background-color: darkblue;
+}

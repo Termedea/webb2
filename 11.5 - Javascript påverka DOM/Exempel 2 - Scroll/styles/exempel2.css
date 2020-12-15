@@ -1,16 +1,18 @@
-body {
-    height: 200vh;
+.container {
+    width: 100%;
+    display: flex;
+
+    gap: 1rem;
 }
-div {
-    width: 200px;
-    margin: 10rem auto;
+.container > div {
+    flex-grow: 1;
+    color: white;
+    font-size: 3rem;
+    padding: 2rem;
+    height: 150vh;
+    background-color: rgb(255, 123, 152);
 }
-.large {
-    height: 200px;
-}
-.middle {
-    height: 100px;
-}
-.small {
-    height: 50px;
+
+.container > div.ok {
+    background-color: lightgreen;
 }
