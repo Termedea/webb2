@@ -6,12 +6,12 @@ infoIcon.addEventListener("mouseover", toggleTooltip);
 infoIcon.addEventListener("mouseout", toggleTooltip);
 
 function toggleTooltip(event) {
-    hidden = event.type=="mouseover";
-    
+    hidden = event.type=="mouseover";    
 	hidden ? tooltip.classList.remove("hidden") : tooltip.classList.add("hidden");
 }
 
-document.getElementById("square").addEventListener("mouseover", (event) =>{
+
+document.getElementById("square").addEventListener("mouseover", (event) => {
     window.addEventListener("mousemove",positionChanged);
 });
 

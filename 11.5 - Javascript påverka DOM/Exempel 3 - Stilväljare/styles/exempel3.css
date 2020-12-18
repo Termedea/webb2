@@ -2,6 +2,7 @@
     max-width: 35rem;
     margin: 3rem auto;
     padding: 3rem;
+    font-family: 'Calibri', sans-serif;
 }
 input,
 select {
@@ -21,21 +22,24 @@ label {
     margin-bottom: 2rem;
 }
 #changable {
-    border: 1px solid #000;
+    align-items: center;
+    justify-content: center;
+    transform-origin: top;
     text-align: center;
+
+    border: 1px solid #000;
     width: 200px;
     height: 200px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+
+    transition: all 200ms ease;
 }
 .green-square {
     background: rgb(114, 214, 114);
 }
 .blue-big-rounded {
     transform: scale(2);
-    transform-origin: top;
     background: rgb(103, 103, 219);
     border-radius: 25%;
     color: white;
