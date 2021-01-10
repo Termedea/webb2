@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 200vh;
+    color: rgba(100, 50, 50, 1);
+}
+header {
+    height: 20vh;
+    background: rgba(255, 181, 237, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+@media (min-width: 640px) {
+    header {
+        height: 30vh;
+        justify-content: center;
+        align-items: center;
+    }
+}
+header i.fas.fa-bars {
+    font-size: 2rem;
+    display: inline-block;
+    align-self: flex-start;
+}
+@media (min-width: 640px) {
+    header i.fas.fa-bars {
+        display: none;
+    }
+}
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    margin-left: 1rem;
+    text-align: center;
+}
+nav {
+    background: rgba(255, 181, 237, 1);
+    border-top: 2px solid rgba(100, 50, 50, 1);
+}
+nav.mobile {
+    background: rgba(100, 50, 50, 0.7);
+    border-top: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: 100vh;
+    width: 30vw;
+    color: white;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+@media (min-width: 640px) {
+    nav ul {
+        font-size: 1.5rem;
+        justify-content: flex-end;
+    }
+}
+nav.mobile ul {
+    border: 0;
+    display: block;
+}
+nav ul li {
+    padding: 1rem;
+    list-style-type: none;
+
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+nav.mobile ul li {
+    padding-left: 1rem;
+}
+main div {
+    padding: 1.7rem 1rem;
+    max-width: 60em;
+    margin: 0 auto;
+}
