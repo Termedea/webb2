@@ -23,7 +23,6 @@ function handleIconClick (e) {
 }
 
 
-
 window.addEventListener("scroll", handleWindowScroll);
 
 var scrolledClass = "scrolled"; 
