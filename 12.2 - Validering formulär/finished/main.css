@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 254, 238);
+    color: rgb(40, 34, 75);
+    width: 100%;
+}
+
+form {
+    max-width: 45rem;
+    margin: 5rem auto;
+}
+form > div {
+    display: flex;
+    padding: 1.1rem;
+    font-size: 1.1rem;
+}
+form > div > label {
+    flex-grow: 1;
+}
+form > div > input {
+    min-width: 20rem;
+    padding: 0.6rem;
+    border: 2px solid darkslateblue;
+    border-radius: 0.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button {
+    padding: 0.3rem 2rem;
+    border-radius: 0.3rem;
+    background-color: rgb(123, 114, 185);
+    color: rgb(255, 254, 238);
+    border: 1px solid darkslateblue;
+}
+button[disabled='disabled'] {
+    background-color: rgb(236, 236, 236);
+    border: 1px solid rgb(201, 201, 201);
+}
