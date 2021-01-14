@@ -1,6 +1,7 @@
 var emailInput = document.getElementById("email");
 var passwordInput = document.getElementById("password");
 var repeatPasswordInput = document.getElementById("repeat-password");
+var submitButton = document.getElementById("")
 var formValid = false; 
 
 
@@ -13,26 +14,50 @@ function validateEmail() {
     var exp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     
      if (!emailText) {
-        console.log("inte ifyllt");
-        formValid = false; 
+        setError("Du måste fylla i en e-postadress", emailInput);        
         
     } else if(!exp.test(emailText)) {
-        console.log("fel format");
-        formValid = false; 
-    }else if(emailText && exp.test(emailText)){
+        setError("E-postadressen är i fel format. Exempel på rätt format: namn@domän.se", emailInput);        
+
+    } else if(emailText && exp.test(emailText)){
         formValid = true;
-        console.log("ok");
-
-    }
-    
-    
+        
+    }        
 }
+
+
 function validatePasswordStrenght() {
-    console.log("pwd");
+    var passwordText = passwordInput.value;
+    if(!passwordText) {
+        setError("Du måste fylla i ett lösenord.", emailInput);          
+
+    } else if (passwordText.length < 8) {
+        setError("Lösenordet måste var minst 8 tecken långt. ", emailInput);  
+
+    } else if(passwordText >= 8) {
+        formValid = true; 
+
+    }    
 }
+
 function validateRepeatedPassword() {
-    console.log("repeat");
+    var passwordText = passwordInput.value;
+    var passwordRepeatText = repeatPasswordInput.value;
+    if(passwordText != passwordRepeatText) {
+        setError("Lösenorden är inte likadana.", repeatPasswordInput);
+    }
+    else {
+        formValid = true; 
+    }
 }
 
 
 
+
+
+
+function setError(msg, field) {
+    formValid = false; 
+    console.log(msg); 
+
+}
