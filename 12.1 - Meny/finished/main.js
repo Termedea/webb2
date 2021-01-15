@@ -11,7 +11,7 @@ function handleIconClick (e) {
         
         if(e.target === showMenuIcon) {                    
             menu.classList.add(mobileClass);
-            menu.style.display ="inline-block";             
+            menu.style.display ="block";             
             showMenuIcon.style.visibility = "hidden";
         }
     
