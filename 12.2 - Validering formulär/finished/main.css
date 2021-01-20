@@ -7,7 +7,14 @@ body {
     color: rgb(40, 34, 75);
     width: 100%;
 }
-
+div#error-msg {
+    padding: 0.5rem;
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 2px solid red;
+    color: rgb(71, 71, 71);
+    display: none;
+    text-align: center;
+}
 form {
     max-width: 45rem;
     margin: 5rem auto;
@@ -38,4 +45,11 @@ button {
 button[disabled='disabled'] {
     background-color: rgb(236, 236, 236);
     border: 1px solid rgb(201, 201, 201);
+}
+input:focus {
+    outline: 0;
+}
+input.error {
+    border: 2px solid red;
+    box-shadow: 0 0 3px red;
 }
