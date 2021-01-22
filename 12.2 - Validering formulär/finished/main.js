@@ -1,102 +1,108 @@
-var emailInput = document.getElementById("email");
-var passwordInput = document.getElementById("password");
+//variabel för form
+var formElement = document.getElementById("form"); 
+//variabel för input epost
+var emailInput = document.getElementById("email"); 
+//Variabel för input lösenord
+var passwordInput = document.getElementById("password"); 
+//variabel för input repetera lösenord
 var repeatPasswordInput = document.getElementById("repeat-password");
-var submitButton = document.getElementById("send");
-var formElement = document.getElementById("registration-form"); 
-var errorClass = "error";
+//variabel för submit-knapp. 
+var submitButton = document.getElementById("send"); 
 
+//övriga variabler
 var emailValid = false; 
 var passwordValid = false; 
 var repeatPasswordValid = false; 
+var errorClass = "error";
 
+//lyssnare
 emailInput.addEventListener("blur", validateEmail);
-passwordInput.addEventListener("blur", validatePasswordStrenght);
-repeatPasswordInput.addEventListener("blur", validateRepeatedPassword);
-submitButton.addEventListener("click", sendForm); 
+passwordInput.addEventListener("blur", validatePassword);
+repeatPasswordInput.addEventListener("blur", validateRepeatPassword);
 
+submitButton.addEventListener("click", submitForm);
+
+//valideringsfunktioner 
 function validateEmail() {        
-
-    var emailText = emailInput.value;
-    var exp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-     if (!emailText) {
-        setError("Du måste fylla i en e-postadress", emailInput);       
-        emailValid = false;  
-        
-    } else if(!exp.test(emailText)) {
-        setError("E-postadressen är i fel format. Exempel på rätt format: namn@domän.se", emailInput);   
-        emailValid = false;       
-
+    var exp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;    
+    var emailText = emailInput.value;        
+    //finns det något i fältet?
+    if(!emailText) {
+        emailValid = false; 
+        setError("Du måste fylla i en e-postadress.", emailInput);
+    } else if (!exp.test(emailText)) {
+        //är e-postadressen i rätt format?   
+        emailValid = false; 
+        setError("E-postadressen är i fel format. Exempel på rätt format: namn@doman.se", emailInput);
     } else if(emailText && exp.test(emailText)) {
-        emailValid = true;   
-        setOk(emailInput);
-    }        
+        //allt ok.
+        emailValid = true; 
+        setCorrect(emailInput);
+    }
 }
 
-function validatePasswordStrenght() {
-    
-    var passwordText = passwordInput.value;
-
+function validatePassword() {
+    var passwordText = passwordInput.value; 
+    //fältet får inte vara tomt.
     if(!passwordText) {
-        setError("Du måste fylla i ett lösenord.", passwordInput);    
-        passwordValid = false;       
-
-    } else if (passwordText.length < 8) {
-        setError("Lösenordet måste var minst 8 tecken långt. ", passwordInput);
-        passwordValid = false;   
-
-    } else if(passwordText >= 8) {
+        passwordValid = false; 
+        setError ("Du måste ange ett lösenord.", passwordInput); 
+    } else if(passwordText.length < 8) {
+        //lösenordet får inte vara färre än 8 tecken.
+        setError("Lösenordet måste vara minst 8 tecken långt.", passwordInput);         
+    } else if(passwordText && passwordText.length >=8) {
         passwordValid = true; 
-        setOk(passwordInput);
-
+        setCorrect(passwordInput);
     }    
 }
 
-function validateRepeatedPassword() {    
+function validateRepeatPassword() {
+    var repeatPasswordText = repeatPasswordInput.value; 
+    var passwordText = passwordInput.value; 
 
-    var passwordText = passwordInput.value;    
-    var passwordRepeatText = repeatPasswordInput.value;
+    //fältet får inte vara tomt.
+    if(!repeatPasswordText) {
 
-    if(passwordText !== passwordRepeatText) {
-        setError("Lösenorden är inte likadana.", repeatPasswordInput);
         repeatPasswordValid = false; 
-        console.log("lösenord likadana?"); 
-    }
-    else if (passwordText && passwordText === passwordRepeatText)  {
+        setError("Du måste skriva lösenordet igen.", repeatPasswordInput); 
+
+      } else if(repeatPasswordText !== passwordText) {
+
+        //lösenorden måste vara likadana. 
+        setError("Lösenorden måste vara likadana.", repeatPasswordInput); 
+        repeatPasswordValid = false; 
+
+    } else if(repeatPasswordText && repeatPasswordText === passwordText) {
         repeatPasswordValid = true; 
-        setOk(repeatPasswordInput);
-    }
+        setCorrect(repeatPasswordInput);
+    }   
 }
 
-function sendForm(e){
-    e.preventDefault(); 
-    
+function submitForm(e) {
+    //förhindra att formuläret skickas 
+    e.preventDefault();
     if(emailValid && passwordValid && repeatPasswordValid) {
-        formElement.submit();
-        console.log("Formulär skickat"); 
-    } else {
-        console.log("fel i formuläret"); 
+        //skicka bara formuläret om allt är ok. 
+        console.log("submit"); 
+        formElement.submit(); 
     }
 }
 
-function setError(msg, field) {    
-    console.log(msg); 
-    field.classList.add(errorClass); 
+function setError(msg, field) {        
+    field.classList.add(errorClass);    
     var errorMessageElement = document.getElementById(field.id +"-error"); 
-    errorMessageElement.innerHTML = msg;
+    errorMessageElement.innerHTML = msg; 
     errorMessageElement.style.display = "block"; 
-    submitButton.disabled = "true"; 
 }
 
-
-function setOk(field) {
-    var errorMessageElement = document.getElementById(field.id +"-error"); 
+function setCorrect(field) {
     field.classList.remove(errorClass); 
-    errorMessageElement.style.display = "none"; 
-    console.log(emailValid, passwordValid, repeatPasswordValid); 
-    if(emailValid && passwordValid && repeatPasswordValid) {
-        submitButton.removeAttribute("disabled"); 
-    }
 
+    var errorMessageElement = document.getElementById(field.id +"-error"); 
+    errorMessageElement.style.display = "none";     
+
+    if(emailValid && passwordValid && repeatPasswordValid) {
+        submitButton.removeAttribute("disabled");
+    }
 }
 
