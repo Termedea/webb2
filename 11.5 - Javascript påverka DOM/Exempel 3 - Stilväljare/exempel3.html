@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>11.5 - Stilväljare</title>
+
+    <link rel="stylesheet" href="./styles/exempel3.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="input-group">
+            <label for="class">Ange klass:</label>
+            <select name="class" id="class">
+                <option disabled selected></option>
+                <option value="yellow-circle">Gul cirkel</option>
+                <option value="green-square">Grön fyrkant</option>
+                <option value="blue-big-rounded">Blå, större och med rundade hörn</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="style-property">Ange utseende:</label>
+
+            <select name="styleProperty" id="style-property">
+                <option disabled selected></option>
+                <option value="background-color">Bakgrundsfärg</option>
+                <option value="border-color">Färg på border</option>
+                <option value="border-width">Tjocklek på border</option>
+                <option value="color">Textfärg</option>
+                <option value="font-size">Textstorlek</option>
+            </select>
+            <input id="style-value" name="styleValue" type="text">
+        </div>
+        <button id="reset">Återställ</button>
+
+
+        <div id="changable">Förändra mig!</div>
+    </div>
+
+    <script src="scripts/exempel3.js"></script>
+</body>
+
+</html>

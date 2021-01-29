@@ -1,0 +1,51 @@
+.container {
+    max-width: 35rem;
+    margin: 3rem auto;
+    padding: 3rem;
+    font-family: 'Calibri', sans-serif;
+}
+input,
+select {
+    flex-grow: 1;
+}
+label {
+    width: 10rem;
+}
+.input-group {
+    display: flex;
+    flex-grow: ;
+    gap: 1rem;
+    justify-items: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+#changable {
+    align-items: center;
+    justify-content: center;
+    transform-origin: top;
+    text-align: center;
+
+    border: 1px solid #000;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+
+    transition: all 200ms ease;
+}
+.green-square {
+    background: rgb(114, 214, 114);
+}
+.blue-big-rounded {
+    transform: scale(2);
+    background: rgb(103, 103, 219);
+    border-radius: 25%;
+    color: white;
+}
+
+.yellow-circle {
+    background-color: rgb(221, 221, 113);
+    border-radius: 50%;
+}
