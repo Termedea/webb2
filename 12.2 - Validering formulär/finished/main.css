@@ -18,6 +18,9 @@ form > div {
     font-size: 1.1rem;
     flex-wrap: wrap;
 }
+i {
+    display: none;
+}
 form > div > label {
     flex-grow: 1;
 }
