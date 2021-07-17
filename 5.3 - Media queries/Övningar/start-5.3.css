@@ -1,0 +1,33 @@
+/* #region  Grundläggande styling */
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 16pt;
+}
+
+.main-menu ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: .5em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    margin-bottom: .3em;
+}
+
+img {
+    border: 1px solid #000;
+}
+
+/* #endregion */
+
+/** Skriv CSS för övningarna här nedanför**/

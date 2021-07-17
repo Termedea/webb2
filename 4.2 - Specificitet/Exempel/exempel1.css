@@ -1,0 +1,89 @@
+/* Vad händer om jag skriver selektor för nav-element här? */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+
+/* Hur skriver jag något som skriver över något nedanför? */
+header {
+    background-color: papayawhip;
+}
+header nav.main {
+    background: darkblue;
+    color: white;
+    margin: 0;
+}
+header h1 {
+    text-align: center;
+}
+header h1#title {
+    font-size: 3rem;
+}
+/* Hur mycket specificitet har vi här och hur mycket behövs egentligen? */
+div#container header.top h1#title {
+    padding: 3rem;
+    font-family: "Trebuchet MS";
+}
+
+/* Vilken margin? */
+header nav.main ul {
+    display: flex;
+    justify-content: flex-end;
+    /* Vilken margin om jag lägger till en här? */
+}
+header nav.main li {
+    list-style: none;
+    padding: 1rem;
+    border-left: 1px solid #fff;
+    cursor: pointer;
+}
+
+header nav.main li:hover {
+    background: mediumblue;
+}
+
+/* Händer något om jag tar bort "section" */
+section.content-container {
+    max-width: 55rem;
+    background: pink;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    min-height: 30rem;
+}
+
+section.content-container nav.secondary {
+    grid-column: 1 / 3;
+    background-color: mediumorchid;
+}
+
+/* Hur kort kan jag göra denna selektor utan att den går sönder? */
+section.content-container nav.secondary li {
+    padding: 1rem;
+    border-bottom: 1px solid purple;
+}
+section.content-container section.content {
+    grid-column: 3 / 8;
+    background-color: deeppink;
+}
+
+section.content-container aside.ads {
+    grid-column: 8;
+    background: deepskyblue;
+}
+footer.main {
+    background: palevioletred;
+    height: 3rem;
+}
+
+/* Hur skriver jag något som skriver över något ovanför? */

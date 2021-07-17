@@ -1,0 +1,32 @@
+/*** Boxmodellen, exempel 1. Testa att labba med att kommentera fram/bort eller lägga till olika kombinationer av box-sizing, padding, width, border och margin. ***/
+
+* {    
+    box-sizing: content-box; /*default*/
+    /* box-sizing: border-box; */
+}
+
+
+.content {
+    width: 450px;
+    margin: 0 auto;
+    background:#fff; 
+    color: #fff; 
+}
+
+.left {
+    width: 75%;
+    height: 500px;
+    float: left;
+    background-color: brown;
+    
+    }
+
+.right {
+    width: 25%;
+    height: 500px;
+    float: left; 
+    /* Så fort vi sätter dit padding kommer vår layout gå sönder, om vi använder content-box även fast man kan tycka att 25%+75% = 100%. */
+    /* padding: 20px; */
+    background-color: midnightblue;
+}
+

@@ -1,0 +1,50 @@
+
+header.top {
+    background-color: darkgray;
+    padding: 1rem;
+}
+nav ul {
+    display: flex; 
+    justify-content: flex-end;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+main {
+    grid-column: 1 / 7;
+    background: pink;
+    padding: 1rem;
+}
+main article header {
+    border-bottom: 1px solid darkkhaki;
+    padding: 1rem 0;
+}
+section article {
+    margin: 2rem;
+    background: white;
+    padding: 1rem;
+}
+aside {
+    grid-column: 7 / 9;
+    background-color: sandybrown;
+    padding: 1rem;
+}
+aside article {
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+
+footer.main {
+    background: black;
+    color: white; 
+    padding:2.3rem;
+    font-size: 1.3rem;
+}

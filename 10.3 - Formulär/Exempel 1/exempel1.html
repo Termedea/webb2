@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>10.3 - Formulär - Exempel 1</title>
+    <link rel="stylesheet" href="./styles/exempel1.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Texturina:ital,wght@0,300;0,400;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <form class="long-form">
+        <div class="form-group">
+            <label for="name">Ange ditt namn: </label>
+            <input class="form-control" type="text" name="name" id="name" />
+            <div id="nameError" class="error-msg">Något blev fel</div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Ange lösenord: </label>
+            <input class="form-control" type="password" name="password" id="password" />
+        </div>
+
+        <div class="form-group">
+            <label for="birth-date">Ange ditt födelsedatum: </label>
+            <input class="form-control" type="date" name="birthDate" id="birth-date" />
+        </div>
+
+        <div class="form-group">
+            <label for="name">Väj ditt favoritdjur: </label>
+            <select class="form-control" name="favAnimal" id="fav-animal">
+                <option value="cat">Katt</option>
+                <option value="slug">Snigel</option>
+                <option value="bunny">Kanin</option>
+                <option value="dog">Hund</option>
+                <option value="horse">Häst</option>
+                <option value="mosquito">Mygga</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Äger du ett eller flera av ditt favoritdjur?</label>
+            <div class="form-control-group form-control">
+                <input type="radio" name="hasAnimal" id="yes" value="true" /><label for="yes">Ja</label>
+                <input type="radio" name="hasAnimal" id="no" value="false" /><label for="no">Nej</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Vilka fordon äger du?</label>
+            <div class="form-control-group form-control">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="bike">
+                <label for="vehicle1"> Jag har en cykel </label>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="car">
+                <label for="vehicle2"> Jag har en bil</label>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="boat">
+                <label for="vehicle3"> Jag har en båt</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="form-control" type="submit">Spara</button>
+        </div>
+    </form>
+
+    <form class="login-form">
+        <h2>Logga in</h2>
+        <div class="login-form-group">
+            <label class="icon-label" for="username2"><i class="fas fa-user"></i></label>
+            <input type="text" name="username2" id="username2" />
+        </div>
+        <div class="login-form-group">
+            <label class="icon-label" for="password2"><i class="fas fa-key"></i></label>
+            <input type="password" name="password2" id="password2" />
+        </div>
+        <div class="button-container">
+            <button type="submit">Logga in</button>
+        </div>
+    </form>
+
+
+
+</body>
+
+</html>

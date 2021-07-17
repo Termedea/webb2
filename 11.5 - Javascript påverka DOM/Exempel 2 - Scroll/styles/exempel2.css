@@ -1,0 +1,18 @@
+.container {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+.container > div {
+    flex-grow: 1;
+    color: white;
+    font-size: 3rem;
+    padding: 2rem;
+    /* Viewport width måste vara högre än 100, annars skulle vi inte få någon scroll.  */
+    height: 150vh;
+    background-color: rgb(255, 123, 152);
+}
+
+.container > div.ok {
+    background-color: lightgreen;
+}

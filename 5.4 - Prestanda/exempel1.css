@@ -1,0 +1,24 @@
+body {
+    background: url("background-640.png");
+    background-attachment: fixed; 
+    background-size: cover;       
+    color: white;  
+}
+@media screen and (min-width: 850px) and (max-width: 1024px) {
+    body {
+        background: url("background-900.png");
+        color: blue;
+        background-size: cover;      
+    }
+    p {
+        font-size: 3em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background: url("background-1280.png"); 
+        background-size: cover;             
+    }
+}
+

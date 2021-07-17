@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(100, 50, 50, 1);
+    height: 200vh;
+}
+header {
+    height: 300px;
+    background: rgba(255, 181, 237, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+header i.fas.fa-bars {
+    font-size: 2rem;
+    display: inline-block;
+    align-self: flex-start;
+    position: fixed;
+    padding: 0.7rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 0.8rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+nav {
+    display: none;
+}
+
+nav ul {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 1rem;
+    list-style-type: none;
+    cursor: pointer;
+}
+main div {
+    padding: 2rem;
+}
+
+nav ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+nav.mobile {
+    display: block;
+    background: rgba(100, 50, 50, 0.9);
+    border-top: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    width: 50vw;
+    color: white;
+}
+
+nav.mobile i.fa-times {
+    display: inline-block;
+    margin: 1rem;
+    font-size: 2rem;
+    z-index: 1;
+    color: white;
+}
+
+@media (min-width: 640px) {
+    nav {
+        font-size: 1.5rem;
+        background: rgba(255, 181, 237, 1);
+        border-top: 2px solid rgba(100, 50, 50, 1);
+        display: block;
+    }
+    nav.scrolled {
+        border: 0;
+        background: rgba(100, 50, 50, 0.8);
+        color: white;
+        font-size: 0.9rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+    }
+    nav.scrolled ul li:hover {
+        background: rgba(100, 50, 50, 0.3);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header i.fas.fa-bars,
+    nav i.fas.fa-times {
+        display: none;
+    }
+
+    nav ul li:hover {
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+    main div {
+        max-width: 60em;
+        margin: 0 auto;
+    }
+}

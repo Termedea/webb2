@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Candara;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16pt;
+}
+
+.flex-container,
+.flex-container-2 {
+    display: flex;
+    margin: 3em auto;
+    border: 1px solid #000;
+    max-width: 50em;
+}
+
+.flex-container {
+    flex-direction: column;
+}
+
+.flex-container-2 {
+    /* Om elementen ska flytta sig vid mindre skärm. Default: no-wrap. Den enda man behöver sätta för att få kolumner med samma höjd som flyttar efter innehåll*/
+    flex-wrap: wrap;
+    /* justering av main axis (i detta fall horisontellt) 
+     flex-start = vänsterjusterat (default)
+     flex-end = högerjusterat 
+     center = centrerat 
+     space-between = fast höger- och vänsterkant och jämnt avstånd däremellan 
+     space-around =  jämnt avstånd mellan alla element */
+    justify-content: space-evenly;
+}
+
+.flex-container>div,
+.flex-container-2>div {
+    font-size: .7em;
+    padding: 1em;
+}
+
+.flex-container>div {
+    display: flex;
+    /* Justering av cross axis
+        Rubriker och paragrafer är placerade längst en rad som är vertikalt centrerade inuti div:en */
+    align-items: center;
+    flex-basis: 17em;
+}
+
+.flex-container>div>h2 {
+    /* Vi vill dock göra undantag för h2, som är justerade mot toppen, så vi sätter en align-self som "overridar" align-items i flex-containern.  */
+    align-self: flex-start;
+}
+
+.flex-container>div>* {
+    margin: 1em;
+}
+
+.flex-container-2>div {
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+    flex-basis: 15em;
+}
+
+.flexbox-1 {
+    background-color: rgb(107, 81, 131);
+}
+
+.flexbox-2 {
+    background-color: rgb(65, 47, 47);
+}
+
+.flexbox-3 {
+    background-color: rgb(30, 104, 98);
+}
+
+.flexbox-4 {
+    background-color: rgb(35, 139, 87);
+}
+
+.flexbox-5 {
+    background-color: rgb(40, 102, 138);
+}
+
+.flexbox-6 {
+    background-color: rgb(34, 18, 37);
+}
+
+.flexbox-7 {
+    background-color: rgb(150, 145, 69);
+}

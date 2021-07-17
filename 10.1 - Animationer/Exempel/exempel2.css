@@ -1,0 +1,211 @@
+/* Base */
+
+body {
+    padding: 2rem;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+a {
+    background: lightblue;
+    padding: 1rem;
+    color: rgb(3, 3, 85);
+    text-decoration: none;
+    margin-right: 1rem;
+    display: inline-block;
+    /* Hack så att texten inte förvrängs. */
+    transform: perspective(1px) translateZ(0);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* Shape */
+
+.grow,
+.shrink,
+.forward,
+.skew {
+    transition: transform 300ms ease-in;
+}
+
+.grow:hover {
+    transform: scale(1.2);
+}
+
+.shrink:hover {
+    transform: scale(0.8);
+}
+
+.shrink:hover {
+    transform: scale(0.9);
+}
+
+.forward:hover {
+    transform: translateX(5px);
+}
+
+.skew:hover {
+    transform: skew(-15deg);
+}
+
+.pulse:hover {
+    animation: pulse 1s linear infinite;
+}
+
+.push:hover {
+    animation: push 200ms linear 1;
+}
+
+.wobble:hover {
+    animation: wobble 1s linear 1;
+}
+
+@keyframes pulse {
+    25% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes push {
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes wobble {
+    15% {
+        transform: translateX(8px);
+    }
+    33% {
+        transform: translateX(-6px);
+    }
+    50% {
+        transform: translateX(4px);
+    }
+    66% {
+        transform: translateX(-2px);
+    }
+}
+
+
+/* Bakgrund */
+
+.fade {
+    transition-property: color, background-color;
+    transition-duration: 500ms;
+}
+
+.fade:hover {
+    background-color: darkcyan;
+    color: white;
+}
+
+.sweep-right {
+    transition: color 300ms ease-out;
+}
+
+.sweep-right:hover {
+    color: white;
+}
+
+.sweep-right::before {
+    /* För att pseudoelmentet ens ska synas */
+    content: "";
+    /* Positionering av pseudoelement täcker hela elementet (0 i avstånd till left, right, top, bottom) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Bakground bakom text */
+    z-index: -1;
+    /* Vanlig css för att sätta animationen */
+    transition: transform 300ms ease-out;
+    transform: scaleX(0);
+    background: darkcyan;
+    /* Berättar var transformationen börjar */
+    transform-origin: 0;
+}
+
+.sweep-right:hover::before {
+    transform: scaleX(1);
+}
+
+.close {
+    background: darkcyan;
+    transition: color 300ms ease-out;
+}
+
+.close:hover {
+    color: white;
+}
+
+.close::before {
+    /* För att pseudoelmentet ens ska synas */
+    content: "";
+    /* Positionering av pseudoelement (täcker hela elementet) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Bakground bakom text */
+    z-index: -1;
+    /* Animationen */
+    transition: transform 300ms ease-out;
+    /* Effekten */
+    background: lightblue;
+    transform: scaleY(1);
+    transform-origin: 50%;
+}
+
+.close:hover::before {
+    transform: scaleY(0);
+}
+
+.flash:hover {
+    animation: flash 1s ease-in-out infinite;
+}
+
+@keyframes flash {
+    50% {
+        background-color: darkcyan;
+        color: white;
+    }
+}
+
+.border-under-left::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: darkcyan;
+    height: 10px;
+    /* Absolut positionering låter oss animera vart elementet befinner sig. I detta var höger-punkten befinner sig */
+    transform: scaleY(0);
+    transition: transform 200ms ease-out;
+    transform-origin: top;
+}
+
+.border-under-left:hover::before {
+    transform: scaleY(1);
+}
+
+.border-round {
+    transition: border-radius 2s linear;
+}
+
+.border-round:hover {
+    border-radius: 50%;
+}

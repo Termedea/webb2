@@ -1,0 +1,33 @@
+.container {
+    max-width: 55rem;
+    margin: 3rem auto;
+    padding: 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: top;
+}
+.fa-info-circle {
+    font-size: 3rem;
+    color: rgb(75, 75, 148);
+    cursor: pointer;
+}
+.tooltip {
+    border: 1px solid rgb(75, 75, 148);
+    padding: 1.1rem;
+    background: rgb(75, 75, 148, 0.5);
+    color: white;
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+}
+.hidden {
+    opacity: 0;
+}
+
+#square {
+    position: absolute;
+    padding: 2rem;
+    text-align: center;
+    width: 200px;
+    color: white;
+    background-color: darkblue;
+}

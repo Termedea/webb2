@@ -1,0 +1,62 @@
+/* #region Grundläggande styling */
+
+
+/*Grundläggande styling*/
+
+body {
+    font-family: arial;
+    font-size: 16pt;
+    color: white;
+}
+
+div {
+    padding: 1em;
+}
+
+.item-1 {
+    background-color: red;
+}
+
+.item-2 {
+    background-color: cadetblue;
+}
+
+.item-3 {
+    background-color: darkgrey;
+}
+
+.item-4 {
+    background-color: darkred;
+}
+
+.item-5 {
+    background-color: darkcyan;
+}
+
+.item-6 {
+    background-color: lightcoral;
+}
+
+.item-7 {
+    background-color: darkorchid;
+}
+
+.item-8 {
+    background-color: darkslateblue;
+}
+
+.item-9 {
+    background-color: orange;
+}
+
+
+/* #endregion */
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+}
+
+
+/* Rad 4 sträcker är 2x2 rutor stor och befinner sig i nedre vänstra hörnet */

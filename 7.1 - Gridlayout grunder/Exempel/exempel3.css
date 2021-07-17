@@ -1,0 +1,62 @@
+/* #region  Grundläggande css (rör ej) */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial;
+    font-size: 16pt;
+    color: white;
+}
+
+div {
+    padding: 1em;
+}
+
+.item-1 {
+    background-color: red;
+}
+
+.item-2 {
+    background-color: cadetblue;
+}
+
+.item-3 {
+    background-color: darkgrey;
+}
+
+.item-4 {
+    background-color: darkred;
+}
+
+.item-5 {
+    background-color: darkcyan;
+}
+
+.item-6 {
+    background-color: lightcoral;
+}
+
+.item-7 {
+    background-color: darkorchid;
+}
+
+.item-8 {
+    background-color: darkslateblue;
+}
+
+.item-9 {
+    background-color: orange;
+}
+
+
+/* #endregion */
+
+.grid-1 {
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 33%);
+}

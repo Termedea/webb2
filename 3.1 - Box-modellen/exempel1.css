@@ -1,0 +1,23 @@
+div {
+    margin: 1em;
+}
+.div1 {
+    border: 1px solid red; 
+    width: 300px;
+    height: 100px;    
+}
+
+.div2 {
+    border: 1px solid blue; 
+    width: 300px;
+    height: 100px;    
+    padding: 10px; /* Paddingen läggs på utanpå den width/height man specat. */
+}
+
+.div3 {
+    box-sizing: border-box; /* Paddingen läggs inte på den width/height man specat nu. Det gör heller inget att vi har en tjockare border. Den är fortfarande lika stor som den röda.*/
+    border: 3px solid green; 
+    width: 300px;
+    height: 100px;    
+    padding: 10px;     
+}

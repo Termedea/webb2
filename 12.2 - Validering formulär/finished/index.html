@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.2 - Formulär</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
+</head>
+
+<body>
+
+
+    <form action="form.php" name="form" id="form">
+
+        <div class="input-group">
+            <label for="email">E-post: </label>
+            <input type="text" id="email" name="email" placeholder="namn@domän.se" /> <i class="fas fa-check"></i>
+            <div class="error-message" id="email-error"></div>
+        </div>
+
+
+        <div class="input-group">
+            <label for="password">Ange lösenord: </label>
+            <input type="password" id="password" name="password" /> <i class="fas fa-check hidden"></i>
+            <div class="error-message" id="password-error"></div>
+        </div>
+
+
+        <div class="input-group">
+            <label for="repeatPassword">Ange lösenord igen : </label>
+            <input type="password" id="repeat-password" name="repeat-password" /> <i class="fas fa-check hidden"></i>
+            <div class="error-message" id="repeat-password-error"></div>
+        </div>
+
+        <div class="input-group">
+            <button type="submit" id="send" disabled="true">Skicka</button>
+        </div>
+
+    </form>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

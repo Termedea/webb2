@@ -1,0 +1,11 @@
+body  { /* Selektor (element) */
+    color: #fff;
+}
+
+#main { /* Selektor (id:t main) */
+    font-size: 10pt; /* regel + atribut */
+}
+
+.basic  { /* selektor (klassen basic) */
+    background: #000;
+}

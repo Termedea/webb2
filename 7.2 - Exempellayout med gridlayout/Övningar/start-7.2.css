@@ -1,0 +1,25 @@
+/* #region  Grundläggande styling. Rör ej. */
+
+.header {
+    background-color: #212745;
+    color: white;
+}
+
+.left {
+    background: #5ECCF3;
+}
+
+.right {
+    background: #F14124;
+}
+
+.footer {
+    background: #212745;
+    color: white;
+}
+
+
+/* #endregion */
+
+
+/* Skriv din CSS nedanför */
