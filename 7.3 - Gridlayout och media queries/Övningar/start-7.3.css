@@ -5,17 +5,27 @@
     padding: 0;
 }
 
+body {
+    font-size: 16px; 
+}
+
 .container>div {
     padding: 1em;
 }
 
 p {
     margin-top: .3em;
+    font-size: 1.1rem; 
 }
 
 .header {
     background-color: #212745;
     color: white;
+    font-size: 2.5em;
+}
+.container {
+    max-width: 85rem; 
+    margin: 0 auto; 
 }
 
 .main-1 {
@@ -45,20 +55,6 @@ p {
     min-height: 5em;
 }
 
-
-body {
-    font-size: 16pt;
-}
-
-.container {
-    max-width: 65em;
-    margin: 0 auto;
-}
-
-.header {
-    font-size: 2.5em;
-}
-
 img {
     border: 1px solid #212745;
     border-radius: 1em;
@@ -77,10 +73,10 @@ img {
     border: 1px solid green;
     outline: 0; 
     background: lightgreen; 
-    padding: 1rem 4rem; 
-    border-radius: 1rem;
+    padding: 1em 4em; 
+    border-radius: 1em;
     text-align: center; 
-    margin: 1rem; 
+    margin: 1em; 
 }
 
 /* Skriv din kod i dessa media queries  */

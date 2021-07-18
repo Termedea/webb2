@@ -4,6 +4,19 @@
     margin: 0;
     padding: 0;
 }
+body {
+    font-size: 16px;
+}
+
+
+.header {
+    font-size: 2.5em;
+}
+
+.container {
+    max-width: 80rem; 
+    margin: 0 auto;
+}
 
 .container>div {
     padding: 1em;
@@ -11,6 +24,8 @@
 
 p {
     margin-top: .3em;
+    font-size: 1.1rem; 
+
 }
 
 .header {
@@ -45,18 +60,7 @@ p {
     min-height: 5em;
 }
 
-body {
-    font-size: 16pt;
-}
 
-.container {
-    max-width: 65em;
-    margin: 0 auto;
-}
-
-.header {
-    font-size: 2.5em;
-}
 
 img {
     border: 1px solid #212745;
@@ -128,8 +132,7 @@ img {
 
 @media screen and (min-width: 1280px) {
     .container {
-        grid-template-rows: repeat(4, auto) 10rem; 
-        max-width: 55%; 
+        grid-template-rows: repeat(4, auto) 10rem;         
     }    
     .main-1 {
         grid-row: 2 / span 2;
