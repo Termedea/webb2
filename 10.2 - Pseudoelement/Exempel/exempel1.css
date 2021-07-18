@@ -1,0 +1,58 @@
+body {
+    
+    padding: 0; 
+}
+div {
+    
+    text-align: center; 
+}
+a {
+    text-decoration: 0; 
+    color: white; 
+    background: gray; 
+    padding: 2rem; 
+    margin: 1rem;
+    font-size: 3rem; 
+    display: inline-block;    
+}
+
+.sweep {
+    /* Flyttar huvud-elementet ett steg bakåt så att pseudoelementet kan komma emellan det och texten */
+    transform: translateZ(0); 
+    /* Pseudoelementet behöver ha absolut positionering och för att det ska gå behöver föräldern ha position relative */
+    position: relative;    
+    /* En länk är normalt ett inline-element. Inline block behövs för att kunna ange position: relative. */
+    display: inline-block;    
+}
+
+
+.sweep::before {
+    /* Nedanstående gör att rutan ens kan synas */
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    /* Nedanstående gör att rutan sträcker sig över hela förälderns ruta (den har avstånd 0 till alla fyra kanter) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* Hur rutan ska se ut när den kommer fram, och förutsättningar för animationen. I detta fall ska den skalas från 0 (ingen storlek) till 1 (standard storlek) */
+    background: #2098D1;
+    transform: scale(0);    
+
+    /* När vi hovrar vill vi att egenskapen "transform" ska animeras. 
+        Vi ska göra så att egenskapen "transform" ovan går från värdet scaleX(0) till scaleX(1) 
+        Animationen ska ta 0.3 sekunder */    
+    transition: transform 0.3s;
+    
+    
+}
+
+
+
+  .sweep:hover::before {    
+      /* När vi hovrar över länken ska pseudoelementet få full storlek, dvs. täcka hela sin förälder.  */
+    transform: scale(1);
+  }
