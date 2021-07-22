@@ -64,17 +64,17 @@ section.content-container {
 
 section.content-container nav.secondary {
     grid-column: 1 / 3;
-    background-color: mediumorchid;
+    background-color: rgb(54, 39, 58);
 }
 
 /* Hur kort kan jag göra denna selektor utan att den går sönder? */
 section.content-container nav.secondary li {
     padding: 1rem;
-    border-bottom: 1px solid purple;
+    border-bottom: 1px solid rgb(172, 139, 172);
 }
 section.content-container section.content {
     grid-column: 3 / 8;
-    background-color: deeppink;
+    background-color: rgb(238, 135, 190);
 }
 
 section.content-container aside.ads {
