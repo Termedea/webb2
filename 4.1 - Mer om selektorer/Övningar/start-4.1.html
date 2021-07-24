@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>4.1 Selektorer - Övningar</title>
+    <title>4.1 Selektorer - Exempel 1 (övningarna)</title>
     <link rel="stylesheet" href="start-4.1.css">
 </head>
 
 <body>
-    <header>
+    <div class="menu">
+        <h3>Div class menu</h3>
         <nav class="main">
             <ul>
                 <li><a href="">Länk 1</a></li>
@@ -18,7 +19,8 @@
                 <li><a href="">Länk 5</a></li>
             </ul>
         </nav>
-    </header>
+
+    </div>
     <div class="container">
         <h3>Div class container</h3>
         <div class="left">
@@ -39,49 +41,14 @@
         </div>
         <div class="middle">
             <h3>Div class middle</h3>
-            <div class="left">
-                <h3>Div class left</h3>
+            <div class="extra">
+                <h3>Div class extra</h3>
             </div>
         </div>
+
         <div class="right">
             <h3>Div class right</h3>
-        </div>
-    </div>
-    <div id="footer" class="container">
-        <h3>Div id footer, class container</h3>
-        <div class="left">
-            <h3>Div class left</h3>
-            <p>Paragraf 3. Aute proident laboris ea duis amet non. Eu ad minim
-                deserunt sint quis
-                deserunt. Exercitation fugiat esse tempor ipsum occaecat. Qui
-                esse cupidatat nulla nostrud pariatur
-                cupidatat dolor adipisicing exercitation cillum fugiat. <a
-                    href="">Consectetur</a> sit qui mollit
-                adipisicing in esse
-                dolore. Occaecat fugiat nulla incididunt exercitation amet nisi
-                aute incididunt eiusmod labore mollit
-                sint Lorem veniam. Consequat laborum elit anim fugiat sunt sit
-                cillum id incididunt esse.</p>
-            <div class="left">
-                <h3>Div class left</h3>
-            </div>
-            <p>Paragraf 4. Dolor ad eu velit sunt id ullamco. Aliqua ut esse
-                ipsum aute adipisicing laboris incididunt
-                reprehenderit ipsum commodo. Aliquip ea sint commodo nisi minim.
-            </p>
-        </div>
-        <div class="middle">
-            <h3>Div class middle</h3>
-            <div class="left">
-                <h3>Div class left</h3>
-            </div>
-            <div class="left hidden">
-                <h3>Div class left & class hidden</h3>
-            </div>
-        </div>
-        <div class="right">
-            <h3>Div class right</h3>
-            <p class="bottom">Paragraf 5. Ea eiusmod ut sunt exercitation
+            <p class="bottom">Paragraf 3. Ea eiusmod ut sunt exercitation
                 voluptate amet laborum sint culpa. Adipisicing
                 sint
                 sunt sint officia culpa esse mollit. Velit consectetur elit
@@ -89,17 +56,47 @@
                 reprehenderit excepteur elit qui cupidatat magna consectetur
                 cillum incididunt nostrud. Consequat Lorem
                 incididunt exercitation velit laboris sunt anim.</p>
-        </div>
-        <nav class="footer">
-            <ul>
-                <li><a href="">Länk 1</a></li>
-                <li><a href="">Länk 2</a></li>
-                <li><a href="">Länk 3</a></li>
-                <li><a href="">Länk 4</a></li>
-                <li><a href="">Länk 5</a></li>
-            </ul>
-        </nav>
+            <div class="extra">
+                <h3>Div class extra</h3>
+                <p class="left">Paragraf 4. Aute proident laboris ea duis amet
+                    non. Eu ad minim deserunt sint quis
+                    deserunt. Exercitation fugiat esse tempor ipsum occaecat.
+                    Qui esse cupidatat nulla nostrud pariatur
+                    cupidatat dolor adipisicing exercitation cillum fugiat. <a
+                        href="">Consectetur</a> sit qui mollit
+                    adipisicing in esse
+                    dolore. Occaecat fugiat nulla incididunt exercitation amet
+                    nisi
+                    aute incididunt eiusmod labore mollit
+                    sint Lorem veniam. Consequat laborum elit anim fugiat sunt
+                    sit
+                    cillum id incididunt esse.</p>
+            </div>
 
+        </div>
+    </div>
+    <div id="footer" class="container">
+        <h3>Div id footer, class container</h3>
+
+        <nav class="footer">
+            <div class="left menu">
+                <h3>Div class left menu</h3>
+                <ul>
+                    <li><a href="">Länk 1</a></li>
+                    <li><a href="">Länk 2</a></li>
+
+                </ul>
+            </div>
+            <div class="right menu">
+                <div>
+                    <h3>Div class right menu</h3>
+                    <ul>
+                        <li><a href="">Länk 1</a></li>
+                        <li><a href="">Länk 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
 
 
