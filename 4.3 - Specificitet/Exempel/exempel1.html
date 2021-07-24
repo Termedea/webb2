@@ -2,15 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4.3 Specificitet - Exempel 1</title>
-    <link rel="stylesheet" href="exempel1.css">
+    <link rel="stylesheet" href="exempel1.css" />
 </head>
-<style>
-    /* Vad händer om jag skriver CSS för h1-elementet här? */
-
-</style>
 
 <body>
     <div id="container">
@@ -27,7 +23,7 @@
         </header>
         <section class="content-container">
             <nav class="secondary">
-                <ul>
+                <ul id="side-menu">
                     <li class="nav-1">Länk 1</li>
                     <li class="nav-2">Länk 2</li>
                     <li class="nav-3">Länk 3</li>
@@ -35,10 +31,48 @@
                     <li class="nav-5">Länk 5</li>
                 </ul>
             </nav>
-            <section class="content">Huvudinnehåll</section>
-            <aside class="ads">Sidoinnehåll</aside>
+            <section id="main" class="content">
+                <header class="content top">
+                    <h2>Underrubrik 1</h2>
+                </header>
+
+                <p class="important">
+                    En viktig paragraf,
+                    <a href="#">en vanlig länk</a>. Voluptate do culpa
+                    pariatur ex sit adipisicing sit proident eiusmod
+                    deserunt Lorem adipisicing adipisicing. Aliqua proident
+                    aliqua ex laboris eiusmod ex in voluptate esse mollit
+                    anim. Enim velit consectetur amet minim irure velit
+                    consequat est nulla laboris cillum do.
+                </p>
+                <p>
+                    <a href="#" class="important">En viktig länk</a>. Ut
+                    eiusmod anim dolor nulla quis ex ullamco pariatur.
+                    Mollit aute aute reprehenderit ut laborum excepteur
+                    dolore esse. Ex commodo tempor ad dolore deserunt ut do
+                    ea ipsumsec tempor voluptate.
+                    <q>Ett citat mitt i allt.</q> consequat consequat dolore
+                    cillum laboris adipisicing laboris veniam velit. Laborum
+                    amet eu tempor duis nulla do excepteur do.
+                </p>
+                <h2>Underrubrik 2</h2>
+                <p class="more-info">
+                    <a href="#">Läs mer här</a>
+                </p>
+            </section>
+            <aside class="ads">
+                <h2>Reklam</h2>
+            </aside>
         </section>
-        <footer class="main"></footer>
+        <footer class="main">
+            <nav class="main footer">
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instragram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </nav>
+        </footer>
     </div>
 </body>
 

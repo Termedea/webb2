@@ -1,10 +1,23 @@
-/* Vad händer om jag skriver selektor för nav-element här? */
+/* !! Ändra eller skriv ingen kod förrän efter kommentar där det står att du får göra det. !! */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+section,
+aside {
+    min-height: 3rem;
+    padding: 1rem;
+}
+section.content-container aside {
+    border: 0; 
+    background:rgb(73, 15, 73); 
 }
 ul {
     margin: 0;
@@ -13,77 +26,170 @@ ul {
 li {
     list-style-type: none;
 }
+p {
+    margin-top: 0.6rem;
+}
+a {
+    color: rgb(95, 45, 116);
+}
 
-/* Hur skriver jag något som skriver över något nedanför? */
 header {
     background-color: papayawhip;
+    color: black;
 }
-header nav.main {
-    background: darkblue;
-    color: white;
+header nav {
+    background: rgb(217, 217, 255);
     margin: 0;
 }
 header h1 {
     text-align: center;
-}
-header h1#title {
     font-size: 3rem;
-}
-/* Hur mycket specificitet har vi här och hur mycket behövs egentligen? */
-div#container header.top h1#title {
     padding: 3rem;
-    font-family: "Trebuchet MS";
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-/* Vilken margin? */
-header nav.main ul {
+header ul {
     display: flex;
     justify-content: flex-end;
-    /* Vilken margin om jag lägger till en här? */
 }
-header nav.main li {
+#container header li {
     list-style: none;
     padding: 1rem;
-    border-left: 1px solid #fff;
-    cursor: pointer;
+    border: 0; 
+    
 }
 
-header nav.main li:hover {
-    background: mediumblue;
+li:hover {
+    background: rgb(210, 210, 255);
 }
 
-/* Händer något om jag tar bort "section" */
-section.content-container {
-    max-width: 55rem;
-    background: pink;
+div section.content-container {
+    max-width: 50rem;
+    padding: 0;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     min-height: 30rem;
 }
 
-section.content-container nav.secondary {
+#container nav.secondary {
     grid-column: 1 / 3;
-    background-color: rgb(54, 39, 58);
+    background-color: white;
 }
 
-/* Hur kort kan jag göra denna selektor utan att den går sönder? */
-section.content-container nav.secondary li {
+.secondary li {
     padding: 1rem;
-    border-bottom: 1px solid rgb(172, 139, 172);
+    border-bottom: 1px solid purple;
 }
-section.content-container section.content {
+
+section section {
     grid-column: 3 / 8;
-    background-color: rgb(238, 135, 190);
+    background-color: rgb(242, 236, 243);
+    padding: 1rem;
+    color: purple; 
 }
 
-section.content-container aside.ads {
-    grid-column: 8;
-    background: deepskyblue;
+section aside {
+    grid-column: 8 / span 2;
+    background: rgb(150, 164, 168);
 }
-footer.main {
+.bottom {
+    background-color: rgb(63, 78, 78);
+}
+
+footer {
     background: palevioletred;
-    height: 3rem;
 }
 
-/* Hur skriver jag något som skriver över något ovanför? */
+footer ul {
+    display: flex; 
+}
+/* 
+    Nu får du skriva kod!
+    Ändra inte i ovanstående CSS-kod. Lös uppgifterna nedan. 
+    Du får inte använda !important och ta inte bort koden mellan övningarna. 
+*/
+
+/* ** HEADER ** */
+/* gradient-bakgrund på header */
+header {
+    background: linear-gradient(320deg, rgb(217, 217, 255) 50%, rgba(73,15,73,1) 100%);
+}
+
+/* h1 font och textfärg. */
+header h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(73, 15, 73);
+}
+
+/* ** CONTENT ** */
+/* Alla section-element i containern ska ha samma färg. */
+div#container section.content-container * {
+    background-color:rgb(242, 236, 243); 
+}
+
+/* maxbredden på content-containern ska vara 80em, istället för 50. */
+div#container .content-container {
+    max-width: 80rem; 
+}
+
+/* Underrubriken ska inte se ut som headern */
+#main header {
+    background: none; 
+}
+
+/* Alla h2, förutom den i sidoinnehållet, ska ha text-storlek 1.5em, normal font-weight och färgen */
+#main h2 {
+    color: rgb(73, 15, 73);
+    margin: .5rem 0; 
+    font-weight: normal; 
+    font-size: 1.5em; 
+
+}
+
+/* Den första h2 i huvudinnehållet ska inte ha någon margin */
+#main h2:first-child {
+    margin-top: 0; 
+}
+
+/* Sidoytan för reklam ska ha en grå kant till vänster */
+#container aside.ads {
+    border-left:1px solid rgb(150, 164, 168)
+}
+
+/* ** MENYER ** */
+
+/* Alla länkar ska ha cursor pointer */
+li {
+    cursor: pointer;
+}
+
+/* Länkar i top- och sidomeny ska ha samm text-storlek och*/
+nav.main, nav.secondary {
+    font-size: 1.1rem; 
+    color:rgb(63, 78, 78); 
+
+}
+
+nav.main.footer li a{
+    /* inline block behövs för att padding ska funka */
+    display: inline-block; 
+    padding: 1rem; 
+    text-decoration: none;
+    color: white; 
+}
+
+
+/* Main nav i header (inte footer) ska ha en border till vänster mellan sina li-element */ 
+#container header nav.main li {
+    border-left: 1px solid #fff;
+}
+
+nav.secondary li {
+    transition: background-color 0.4s ease; 
+}
+nav.secondary li:hover {
+    background:rgb(73, 15, 73);
+    color: white; 
+}
+  

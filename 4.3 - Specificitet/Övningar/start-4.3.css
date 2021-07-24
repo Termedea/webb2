@@ -102,7 +102,3 @@ footer {
     Ändra inte i ovanstående CSS-kod. Lös uppgifterna nedan. 
     Du får inte använda !important och ta inte bort koden mellan övningarna. 
 */
-a.important {
-    color: rgb(255, 145, 0);
-    font-size: 1.2em; 
-}
